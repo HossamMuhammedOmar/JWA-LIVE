@@ -1,0 +1,499 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* MAIN STYLE  */
+main {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.active-color-1 {
+  background: linear-gradient(rgba(200, 82, 255, 62%), rgba(200, 82, 255, 62%)),
+    url("../images/background-solid.png");
+}
+
+.active-color-2 {
+  background: linear-gradient(rgba(255, 82, 144, 62%), rgba(255, 82, 144, 62%)),
+    url("../images/background-solid.png");
+}
+
+.active-color-3 {
+  background: linear-gradient(rgba(82, 193, 255, 62%), rgba(82, 193, 255, 62%)),
+    url("../images/background-solid.png");
+}
+
+.active-color-4 {
+  background: linear-gradient(rgba(0, 254, 193, 62%), rgba(0, 254, 193, 62%)),
+    url("../images/background-solid.png");
+}
+
+.active-color-5 {
+  background: linear-gradient(rgba(254, 15, 0, 62%), rgba(254, 15, 0, 62%)),
+    url("../images/background-solid.png");
+}
+
+/* WEBSITE NAME */
+h1 {
+  font-family: "Saira Stencil One", cursive;
+  font-size: 100px;
+  color: white;
+  cursor: default;
+  user-select: none;
+}
+
+h1 span {
+  color: #071d55;
+}
+/* FINISH WEBSITE NAME */
+
+/* WEBSITE BIO */
+h2 {
+  font-size: 30px;
+  font-family: "Faster One", cursive;
+  color: white;
+  cursor: default;
+  user-select: none;
+}
+/* FINISH WEBSITE BIO */
+
+/* SUN IMAGE DECORATION AND ANIMATION */
+.sun {
+  width: 505px;
+  height: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  animation: move 5s linear infinite alternate;
+}
+
+/* SUN ANIMATION */
+@keyframes move {
+  0%,
+  100% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 0.93;
+  }
+}
+/* FINISH SUN IMAGE DECORATION AND ANIMATION */
+
+/* START FORM AND INPUT DECORATION */
+form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+input,
+textarea {
+  width: 530px;
+  border: none;
+  outline-style: none;
+  font-family: "Open Sans", sans-serif;
+  color: #929292;
+}
+
+input {
+  height: 50px;
+  padding-left: 20px;
+  box-shadow: 0px -13px 32px rgba(255, 255, 255, 0.25);
+}
+
+textarea {
+  height: 170px;
+  margin: 30px 0;
+  resize: none;
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0px 4px 21px rgba(255, 255, 255, 0.78);
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 20px;
+  color: #c7c7c7;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Style invalid input */
+.error {
+  color: #fe5c15;
+  background-color: rgba(255, 255, 255, 0.78);
+  padding: 8px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.generate {
+  height: 115px;
+  background-color: #071d55;
+  border: none;
+  outline-style: none;
+  color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 60px;
+  font-family: "Saira Stencil One", cursive;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.6s ease;
+}
+
+.generate:hover {
+  letter-spacing: 15px;
+}
+/* FINISH FORM AND INPUT DECORATION */
+
+/* START POPUP DECORATION */
+.pop-up-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  font-family: "Open Sans", sans-serif;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.pop-up-modal {
+  background-color: white;
+  width: 600px;
+  padding: 30px 50px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pop-up-header p {
+  font-size: 60px;
+  color: #e74c3c;
+}
+
+.pop-up-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pop-up-body p:first-child {
+  font-size: 25px;
+  color: #3498db;
+  padding: 10px 0;
+}
+
+.pop-up-body a {
+  text-decoration: none;
+  color: #9b59b6;
+}
+
+.pop-up-close {
+  border: none;
+  outline: none;
+  margin-top: 45px;
+  padding: 10px 25px;
+  background-color: #2c3e50;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.pop-up-close:hover {
+  background-color: #46627f;
+}
+
+.show-popup {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* FINISH POPUP DECORATION */
+
+footer {
+  height: 20vh;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Open Sans", sans-serif;
+}
+
+footer img {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  bottom: 0;
+  z-index: 0;
+}
+
+.color-container {
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  animation: grow 1s linear 1 alternate;
+}
+
+.color-1,
+.color-2,
+.color-3,
+.color-4,
+.color-5 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: red;
+  cursor: pointer;
+  margin: 30px 20px;
+  box-shadow: 2px 2px 10px rgba(49, 49, 49, 0.267);
+  transition: all 0.1s linear;
+}
+
+.color-1:hover,
+.color-2:hover,
+.color-3:hover,
+.color-4:hover,
+.color-5:hover {
+  margin-bottom: 20px;
+}
+
+.color-1 {
+  background-color: rgba(200, 82, 255, 62%);
+}
+
+.color-2 {
+  background-color: rgba(255, 82, 144, 62%);
+}
+
+.color-3 {
+  background-color: rgba(82, 193, 255, 62%);
+}
+
+.color-4 {
+  background-color: rgba(0, 254, 193, 62%);
+}
+
+.color-5 {
+  background-color: rgba(254, 15, 0, 62%);
+}
+
+/* RESULT CONTAINER */
+.result-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+  color: #071d55;
+  justify-content: center;
+}
+
+h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  padding-left: 8px;
+  padding-bottom: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.342);
+  align-self: center;
+  color: aliceblue;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+}
+
+.date-result,
+.temp-result,
+.feel-result {
+  padding: 5px 0px;
+  font-size: 20px;
+  padding: 15px 15px;
+  min-width: 100px;
+  margin-bottom: 15px;
+  background-color: white;
+  border-radius: 30px;
+  text-align: center;
+  cursor: default;
+  transition: all 0.2s linear;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+}
+
+.date-result:hover,
+.temp-result:hover,
+.feel-result:hover {
+  rotate: 5deg;
+}
+
+.back {
+  min-width: 300px;
+  background-color: #071d55;
+  border: none;
+  outline-style: none;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 20px;
+  margin-top: 10px;
+  z-index: 1;
+  font-family: "Open Sans", sans-serif;
+  transition: all 0.2s linear;
+}
+
+.back:hover {
+  rotate: -5deg;
+}
+
+/* FINISH RESULT CONTAINER */
+
+.content-right {
+  position: absolute;
+  z-index: 1;
+  align-self: flex-end;
+  right: 0;
+  padding: 10px 20px;
+  color: #071d55;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* RESPONSE DESIGN */
+@media (max-width: 1620px) {
+  .sun {
+    width: 450px;
+  }
+
+  main {
+    height: 90vh;
+  }
+
+  footer {
+    height: 10vh;
+  }
+}
+
+@media (max-width: 1430px) {
+  .sun {
+    width: 350px;
+  }
+}
+
+@media (max-width: 1105px) {
+  .sun {
+    display: none;
+  }
+}
+
+@media (max-width: 980px) {
+  .color-1,
+  .color-2,
+  .color-3,
+  .color-4,
+  .color-5 {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 800px) {
+  .color-1,
+  .color-2,
+  .color-3,
+  .color-4,
+  .color-5 {
+    width: 35px;
+    height: 35px;
+    margin: 15px 20px;
+  }
+
+  main {
+    height: 95vh;
+  }
+
+  footer {
+    height: 5vh;
+  }
+
+  .content-right {
+    font-size: 11px;
+    padding: 5px 5px;
+    font-weight: normal;
+  }
+
+  .pop-up-modal {
+    width: 60vw;
+  }
+
+  .pop-up-body p:last-child {
+    font-size: 12px;
+
+    font-weight: 100;
+  }
+}
+
+@media (max-width: 630px) {
+  h1 {
+    font-size: 85px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  input,
+  textarea,
+  .generate {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+  }
+  .generate {
+    height: 115px;
+    font-size: 50px;
+    transition: none;
+  }
+  .generate:hover {
+    letter-spacing: normal;
+  }
+  .error {
+    align-self: center;
+    width: 80%;
+    background-color: none;
+    border-radius: 0px 0px 15px 15px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 530px) {
+  .color-1,
+  .color-2,
+  .color-3,
+  .color-4,
+  .color-5 {
+    width: 25px;
+    height: 25px;
+    margin: 15px 20px;
+  }
+  .content-right {
+    font-size: 9px;
+  }
+}

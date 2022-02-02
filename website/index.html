@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WJA-Udacity</title>
+    <!-- START GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Faster+One&family=Open+Sans:wght@700&family=Saira+Stencil+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- END GOOGLE FONT -->
+
+    <!-- WEBSITE LOGO -->
+    <link rel="web icon" type="image" href="images/web-icon.png" />
+
+    <!-- MY CSS STYLE -->
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>W<span>J</span>A</h1>
+      <h2>weather journal journal</h2>
+      <img class="sun" src="images/sun.png" alt="Sun Image" />
+
+      <!-- POPUP CONTAINER -->
+      <div class="pop-up-container">
+        <div class="pop-up-modal">
+          <div class="pop-up-header">
+            <p>OPS!</p>
+          </div>
+          <div class="pop-up-body">
+            <p>City not found!</p>
+            <p>
+              Don't know your location ZIP code?
+              <a href="https://www.whatismyzip.com/" target="_blank"
+                >Click here</a
+              >
+            </p>
+          </div>
+          <button class="pop-up-close">CLOSE</button>
+        </div>
+      </div>
+
+      <form>
+        <input type="text" id="zip" placeholder="Enter ZIP code " />
+        <div class="input-error-message"></div>
+
+        <textarea
+          placeholder="How do you feel today?"
+          id="feel"
+          cols="30"
+          rows="10"
+        ></textarea>
+
+        <button class="generate" type="submit" id="generate">Generate</button>
+      </form>
+
+      <div class="result-container">
+        <h3>Result</h3>
+        <p class="date-result">Data</p>
+        <p class="temp-result">Temperature</p>
+        <p class="feel-result">Your feel</p>
+        <button class="back" type="submit">BACK</button>
+      </div>
+    </main>
+    <footer>
+      <img src="images/footer.png" alt="Footer Image Style" draggable="false" />
+
+      <div class="color-container">
+        <div class="color-1"></div>
+        <div class="color-2"></div>
+        <div class="color-3"></div>
+        <div class="color-4"></div>
+        <div class="color-5"></div>
+      </div>
+      <p class="content-right">© 2022 Hossam Omar</p>
+    </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
