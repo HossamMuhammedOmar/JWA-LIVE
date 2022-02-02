@@ -6,7 +6,6 @@ Weather Journal App - <b>JavaScript</b>
 - [x] HTML
 - [x] CSS
 - [x] JavaScript
-- [x] Node.js
 - [x] Figma for UI
   * URL: https://www.figma.com/file/05RU7ePbAMVqSMbmXBom6R/Untitled?node-id=0%3A1
   
