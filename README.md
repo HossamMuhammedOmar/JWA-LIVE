@@ -23,7 +23,7 @@ Weather Journal App - <b>JavaScript</b>
 
 ### LIVE DEMO
 *Usning Netfly*
-https://61fa306c6fc369c49b700317--ecstatic-mirzakhani-9fb092.netlify.app/
+https://wjapp.netlify.app/
 
 
 *Thank you*
